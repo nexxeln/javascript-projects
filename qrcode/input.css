@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+input[type='text']:focus ~ .input-text {
+  @apply text-indigo-700 bg-black transform -translate-y-6 -translate-x-0 scale-90;
+}
+input[type='text']:default ~ .input-text-stay {
+  @apply text-indigo-700 bg-black transform -translate-y-6 -translate-x-0 scale-90;
+}

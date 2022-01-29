@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="input.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css"
+    />
+    <title>Generator</title>
+  </head>
+  <body class="bg-black">
+    <nav class="bg-indigo-700">
+      <div class="max-w-6xl mx-auto px-8">
+        <div class="flex justify-between">
+          <div class="flex space-x-4">
+            <div>
+              <a
+                href="index.html"
+                class="flex items-center py-5 px-2 text-gray-50 hover:bg-indigo-600 rounded-xl"
+              >
+                <svg
+                  class="w-6 h-6 mr-1 text-black"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"
+                  ></path>
+                </svg>
+                <span class="font-bold">QR Code Utility</span>
+              </a>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-1">
+              <a
+                href="generator.html"
+                class="py-5 px-3 text-gray-50 hover:bg-indigo-600 rounded-xl"
+                >Generator</a
+              >
+              <a
+                href="scanner.html"
+                class="py-5 px-3 text-gray-50 hover:bg-indigo-600 rounded-xl"
+                >Scanner</a
+              >
+            </div>
+          </div>
+
+          <div class="hidden md:flex items-center space-x-1">
+            <a
+              href="https://github.com/nexxeln/javascript-projects"
+              class="py-2 px-3 bg-black rounded text-white hover:bg-transparent border-2 border-black transition duration-400"
+            >
+              GitHub
+            </a>
+          </div>
+          <div class="md:hidden flex items-center">
+            <button class="mobile-menu-btn">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-menu hidden md:hidden">
+        <a
+          href="generator.html"
+          class="block py-2 px-4 text-sm hover:bg-indigo-600 text-white"
+          >Generator</a
+        >
+        <a
+          href="scanner.html"
+          class="block py-2 px-4 text-sm hover:bg-indigo-600 text-white"
+          >Scanner</a
+        >
+        <a
+          href="https://github.com/nexxeln/javascript-projects"
+          class="block py-2 px-4 text-sm hover:bg-indigo-600 text-white"
+          >GitHub</a
+        >
+      </div>
+    </nav>
+
+    <div class="flex flex-wrap">
+      <div>
+        <div class="flex items-start justify-start px-36 py-12">
+          <div class="relative">
+            <input
+              id="text-field"
+              type="text"
+              class="bg-black w-72 text-white border-b border-white focus:outline-none py-1 focus:border-indigo-700 focus:border-b-2 transition-colors duration-200 peer"
+              autocomplete="off"
+            />
+            <label
+              id="text-label"
+              for="text-field"
+              class="absolute text-white left-0 top-1 cursor-text peer-focus:text-xs peer-focus:text-indigo-700 peer-focus:-top-4 duration-200 transition-all"
+              >Text</label
+            >
+          </div>
+        </div>
+
+        <div class="flex items-start justify-start px-36 py-12">
+          <div class="relative">
+            <input
+              id="light-colour-field"
+              type="text"
+              class="bg-black w-72 text-white border-b border-white focus:outline-none py-1 focus:border-indigo-700 focus:border-b-2 transition-colors duration-200 peer"
+              autocomplete="off"
+            />
+            <label
+              id="light-colour-label"
+              for="light-colour-field"
+              class="absolute text-white left-0 top-1 cursor-text peer-focus:text-xs peer-focus:text-indigo-700 peer-focus:-top-4 duration-200 transition-all"
+              >Light Colour</label
+            >
+          </div>
+        </div>
+        <div class="flex items-start justify-start px-36 py-12">
+          <div class="relative">
+            <input
+              id="dark-colour-field"
+              type="text"
+              class="bg-black w-72 text-white border-b border-white focus:outline-none py-1 focus:border-indigo-700 focus:border-b-2 transition-colors duration-200 peer"
+              autocomplete="off"
+            />
+            <label
+              id="dark-colour-label"
+              for="dark-colour-field"
+              class="absolute text-white left-0 top-1 cursor-text peer-focus:text-xs peer-focus:text-indigo-700 peer-focus:-top-4 duration-200 transition-all"
+              >Dark Colour</label
+            >
+          </div>
+        </div>
+        <br />
+
+        <div class="flex items-start justify-start px-36 text-indigo-500">
+          <div class="py-1">Colour Picker: &nbsp;</div>
+          <div class="color-picker"></div>
+          <div class="px-12">
+            <button
+              id="generate"
+              class="bg-indigo-600 text-white bg-transparent rounded-lg w-24 h-8 flex justify-center items-center hover:bg-transparent hover:border-2 hover:border-white"
+            >
+              GENERATE
+            </button>
+          </div>
+        </div>
+
+        <div class="flex items-start justify-start px-36 py-2">
+          <p class="text-green-500 text-sm">
+            Please enter all colours as hex codes. <br />
+            The colours have to be of different shades for the QR Code to be
+            functionable.
+          </p>
+        </div>
+      </div>
+      <div
+        id="qrcode"
+        class="flex items-center justify-center bg-gray-100 rounded-xl w-96 h-96 my-16 px-6 py-6 shadow shadow-indigo-400"
+      ></div>
+    </div>
+    <div id="qrcode"></div>
+
+    <script>
+      const textLabel = document.getElementById("text-label");
+      const textField = document.getElementById("text-field");
+      textField.addEventListener("input", (event) => {
+        let input = event.target;
+
+        if (event.target.value) {
+          ["border-indigo-700", "border-b-2"].forEach((c) =>
+            input.classList.add(c)
+          );
+          ["text-xs", "-top-4", "text-indigo-700"].forEach((c) =>
+            textLabel.classList.add(c)
+          );
+        } else {
+          ["border-indigo-700", "border-b-2"].forEach((c) =>
+            input.classList.remove(c)
+          );
+          ["text-xs", "-top-4", "text-indigo-700"].forEach((c) =>
+            textlabel.classList.remove(c)
+          );
+        }
+      });
+
+      const lightLabel = document.getElementById("light-colour-label");
+      const lightField = document.getElementById("light-colour-field");
+      lightField.addEventListener("input", (event) => {
+        let input = event.target;
+
+        if (event.target.value) {
+          ["border-indigo-700", "border-b-2"].forEach((c) =>
+            input.classList.add(c)
+          );
+          ["text-xs", "-top-4", "text-indigo-700"].forEach((c) =>
+            lightLabel.classList.add(c)
+          );
+        } else {
+          ["border-indigo-700", "border-b-2"].forEach((c) =>
+            input.classList.remove(c)
+          );
+          ["text-xs", "-top-4", "text-indigo-700"].forEach((c) =>
+            lightLabel.classList.remove(c)
+          );
+        }
+      });
+
+      const darkLabel = document.getElementById("dark-colour-label");
+      const darkField = document.getElementById("dark-colour-field");
+      darkField.addEventListener("input", (event) => {
+        let input = event.target;
+
+        if (event.target.value) {
+          ["border-indigo-700", "border-b-2"].forEach((c) =>
+            input.classList.add(c)
+          );
+          ["text-xs", "-top-4", "text-indigo-700"].forEach((c) =>
+            darkLabel.classList.add(c)
+          );
+        } else {
+          ["border-indigo-700", "border-b-2"].forEach((c) =>
+            input.classList.remove(c)
+          );
+          ["text-xs", "-top-4", "text-indigo-700"].forEach((c) =>
+            darkLabel.classList.remove(c)
+          );
+        }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+    <script src="qrcode.min.js"></script>
+    <script src="generator.js"></script>
+  </body>
+</html>
